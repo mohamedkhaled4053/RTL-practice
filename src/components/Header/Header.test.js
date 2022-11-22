@@ -11,7 +11,7 @@ it('render title',()=>{
 it('render title with other select method' ,()=>{
     let testTitle = 'test title'
     render(<Header title= {testTitle}/>)
-    let el  = screen.getByRole('heading',{name:'cat'})
+    let el  = screen.getByRole('heading',{name:testTitle})
     expect(el).toBeInTheDocument()
 })
 it('render title with other select by testid' ,()=>{
@@ -41,5 +41,5 @@ it('render title getAll', ()=>{
     let testTitle = 'test title'
     render(<Header title= {testTitle}/>)
     let el  =  screen.getAllByRole('heading')
-    expect(el.length).toBe(2)
+    expect(el.length).toBe(1)
 })
